@@ -1,0 +1,36 @@
+{
+  "name": "@barksh/io",
+  "version": "2.0.0",
+  "description": "IO Support",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BarkSH/Bark-IO.git"
+  },
+  "author": "WMXPY",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BarkSH/Bark-IO/issues"
+  },
+  "homepage": "https://github.com/BarkSH/Bark-IO#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@sudoo/build-utils": "^1.0.0",
+    "@sudoo/license": "^1.1.0",
+    "@sudoo/triforce": "^2.17.0"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "include": [
+      "src/**/*.ts"
+    ],
+    "instrument": true,
+    "reporter": [
+      "json",
+      "text-summary"
+    ],
+    "report-dir": "coverage",
+    "sourceMap": true
+  }
+}
