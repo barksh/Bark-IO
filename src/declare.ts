@@ -4,6 +4,7 @@
  * @description Declare
  */
 
-export type IOWriteTextResult = {
+export type IOWriteResult = {
 
+    readonly succeed: boolean;
 };
