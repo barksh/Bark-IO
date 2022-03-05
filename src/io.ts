@@ -6,8 +6,11 @@
 
 export abstract class BarkIO {
 
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
-    protected constructor() {
+    private readonly _identifier: string;
+
+    protected constructor(identifier: string) {
+
+        this._identifier = identifier;
     }
 
     public abstract write(content: string): void | Promise<void>;
