@@ -7,13 +7,18 @@
 
 import { expect } from 'chai';
 import * as Chance from 'chance';
+import { MockIO } from '../mock/mock';
 
-describe('Placeholder', (): void => {
+describe('Given {BarkIO} Class', (): void => {
 
-    const chance: Chance.Chance = new Chance('placeholder');
+    const chance: Chance.Chance = new Chance('io-io');
 
-    it('Placeholder', (): void => {
+    it('should be able to record logs', (): void => {
 
-        expect(chance.string()).to.be.not.equal(chance.string());
+        const io: MockIO = new MockIO();
+
+        io.write(chance.string());
+
+        expect(io.output).to.be.lengthOf(1);
     });
 });
