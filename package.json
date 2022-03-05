@@ -1,6 +1,6 @@
 {
   "name": "@barksh/io",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "IO Support",
   "repository": {
     "type": "git",
@@ -12,7 +12,6 @@
     "url": "https://github.com/BarkSH/Bark-IO/issues"
   },
   "homepage": "https://github.com/BarkSH/Bark-IO#readme",
-  "dependencies": {},
   "devDependencies": {
     "@sudoo/build-utils": "^1.0.0",
     "@sudoo/license": "^1.1.0",

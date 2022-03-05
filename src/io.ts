@@ -29,12 +29,26 @@ export abstract class BarkIO {
             return await this.writeObject(content);
         }
 
+        if (Object.hasOwnProperty.call(content, 'toString')) {
+            return await this.writeString(content.toString());
+        }
+
         return await this.writeString(String(content));
     }
 
+    // INFO METHODS
     public abstract writeString(content: string): IOWriteResult | Promise<IOWriteResult>;
 
     public abstract writeObject(content: Record<string, string>): IOWriteResult | Promise<IOWriteResult>;
 
     public abstract writeArray(content: string[]): IOWriteResult | Promise<IOWriteResult>;
+
+    // VERBOSE METHODS
+    public abstract writeVerbose(content: string): IOWriteResult | Promise<IOWriteResult>;
+
+    public abstract writeDebug(content: string): IOWriteResult | Promise<IOWriteResult>;
+
+    public abstract writeWarning(content: string): IOWriteResult | Promise<IOWriteResult>;
+
+    public abstract writeError(content: string): IOWriteResult | Promise<IOWriteResult>;
 }
