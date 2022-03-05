@@ -15,7 +15,7 @@ export abstract class BarkIO {
         this._identifier = identifier;
     }
 
-    public get identifier() {
+    public get identifier(): string {
         return this._identifier;
     }
 
